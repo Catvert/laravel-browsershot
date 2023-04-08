@@ -45,6 +45,7 @@ abstract class Wrapper
     {
         $browsershot = new Browsershot($url);
         $browsershot->setNodeBinary(config('browsershot.nodeBinary'))
+                    ->setBinPath(config('browsershot.binPath'))
                     ->setNpmBinary(config('browsershot.npmBinary'))
                     ->setProxyServer(config('browsershot.proxyServer'));
 
